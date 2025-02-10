@@ -7,14 +7,90 @@
     <title>Системы Информационной Безопасности</title>
   </head>
   <body>
-    <br>
-    <br>
-    <button class="start">start video</button>
-    <br>
-    <button class="stop">stop video</button>
-    <br>
-    <video class="video" width="500" height="500" style="border: 2px solid grey;"></video>
-    <div id="app"></div>
+
+    <header class="header">
+      <a href="/" class="header__logo logo">
+        <img src="#" alt="" class="logo__icon">
+        <div class="logo__text"></div>
+      </a>
+    </header>
+    <main>
+      <section class="one container">
+          <div class="one__content one-content">
+            <h1 class="h1 one-content__title"></h1>
+            <p class="one-content__text"></p>
+            <p class="one-content__text"></p>
+            <form action="#" class="one-content__check-form check-form form">
+              <button class="btn check-form__submit" type="submit"></button>
+              <label class="checkbox">
+                <input type="checkbox" name="agreement" class="checkbox__input">
+                <span class="checkbox__status"></span>
+                <span class="checkbox__text">
+
+                </span>
+              </label>
+            </form>
+          </div>
+          <div class="one__preview">
+            <div class="one-preview">
+              <img src="" alt="" class="one-preview__pic">
+            </div>
+          </div>
+      </section>
+      <section class="two">
+        <header class="two__header two-header">
+          <h2 class="h2 two-header__title"></h2>
+          <div class="two-header__number two-number">
+            <div class="two-number__value"></div>
+            <div class="two-number__text"></div>
+          </div>
+          <div class="two-header__number two-number">
+            <div class="two-number__value"></div>
+            <div class="two-number__text"></div>
+          </div>
+        </header>
+        <div class="two__content">
+          <div class="two__tile two-tile">
+            <div class="two-tile__icon"></div>
+            <div class="two-tile__content">
+              <h3 class="h3 two-tile__title"></h3>
+              <p class="two-tile__text"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="three container">
+        <div class="three__content">
+          <p class="three__subtitle"></p>
+          <h2 class="h2 three__title">
+            <span class="three__title--border"></span>
+          </h2>
+          <form class="form">
+            <label class="form-item form-item--name">
+              <input type="text" name="name" placeholder="Вашу ФИО">
+            </label>
+            <label class="form-item form-item--email">
+              <input type="text" name="email" placeholder="E-mail">
+            </label>
+            <label class="form-item form-item--phone">
+              <input type="text" name="phone" placeholder="Телефон">
+            </label>
+            <button class="btn form__submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div style="display: none;">
+
+      <br>
+      <br>
+      <button class="start">start video</button>
+      <br>
+      <button class="stop">stop video</button>
+      <br>
+      <video class="video" width="500" height="500" style="border: 2px solid grey;"></video>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
