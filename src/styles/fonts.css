@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'OptimusPrincepsCyr';
+    src: url('./fonts/OptimusPrincepsCyr.woff2') format('woff2'),
+        url('./fonts/OptimusPrincepsCyr.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('./fonts/PlayfairDisplay-Black.woff2') format('woff2'),
+        url('./fonts/PlayfairDisplay-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('./fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('./fonts/PlayfairDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
