@@ -4,6 +4,7 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+  @extend .container;
   background-image: url('../assets//img/one-bg-head.png'), url('../assets/img/one-bg.jpg');
   background-size: 62%, cover;
   background-position: top right, bottom center;
@@ -69,7 +70,7 @@
     width: 240px;
   }
   &__checkbox{
-    padding-top: 44px;
+    margin-top: 44px;
   }
 }
 .one-preview{

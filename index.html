@@ -15,7 +15,7 @@
       </a>
     </header>
     <main>
-      <section class="one container">
+      <section class="one">
           <div class="one__content one-content">
             <h1 class="h1 one-content__title">Печать ереси WEB SDK </h1>
             <p class="one-content__text">Сделай селфи и узнай насколько ты еретик.</p>
@@ -23,7 +23,7 @@
             <form action="#" class="one-content__check-form check-form form">
               <button class="btn check-form__submit" type="submit">Провериться</button>
               <label class="check-form__checkbox checkbox">
-                <input type="checkbox" name="agreement" class="checkbox__input">
+                <input type="checkbox" name="agreement" class="checkbox__input" required="true">
                 <span class="checkbox__status"></span>
                 <span class="checkbox__text"> Я согласен гореть в аду в случае высокого уровня ереси в крови </span>
               </label>
@@ -35,7 +35,7 @@
             </div>
           </div>
       </section>
-      <section class="two container">
+      <section class="two">
         <header class="two__header two-header">
           <h2 class="h2 two-header__title">Снижаем уровень <br>ереси с XIII века.</h2>
           <div class="two-header__number two-number">
@@ -96,24 +96,29 @@
           </div>
         </div>
       </section>
-      <section class="three container" style="display: none;">
+      <section class="three">
         <div class="three__content">
-          <p class="three__subtitle"></p>
-          <h2 class="h2 three__title">
-            <span class="three__title--border"></span>
-          </h2>
-          <form class="form">
-            <label class="form-item form-item--name">
-              <input type="text" name="name" placeholder="Вашу ФИО">
-            </label>
-            <label class="form-item form-item--email">
-              <input type="text" name="email" placeholder="E-mail">
-            </label>
-            <label class="form-item form-item--phone">
-              <input type="text" name="phone" placeholder="Телефон">
-            </label>
-            <button class="btn form__submit">Отправить</button>
-          </form>
+          <div class="three__container">
+            <p class="three__subtitle">форма заявки</p>
+            <h2 class="h2 three__title">
+              Заказать <span class="three__title--border">очищение.</span>
+            </h2>
+            <form class="three__form form callback-form">
+              <label class="form-item form-item--name">
+                <input class="form-item__input" type="text" name="name" placeholder="Вашу ФИО">
+                <span class="form-item__error form-item__error--hidden">error</span>
+              </label>
+              <label class="form-item form-item--email">
+                <input class="form-item__input" type="text" name="email" placeholder="E-mail">
+                <span class="form-item__error form-item__error--hidden">error</span>
+              </label>
+              <label class="form-item form-item--phone">
+                <input class="form-item__input" type="text" name="phone" placeholder="Телефон">
+                <span class="form-item__error form-item__error--hidden">error</span>
+              </label>
+              <button class="btn callback-form__submit" type="submit">Отправить</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>

@@ -1,0 +1,29 @@
+body{
+  font-family: $optimus;
+  font-size: 16px;
+  color: $cl-gray;
+}
+*{
+  margin: 0;
+  box-sizing: border-box;
+  outline-color: $cl-input-focus;
+}
+img{
+  width: 100%;
+}
+.container{
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (min-width: 768px) {
+    padding-left: $sm-padding;
+    padding-right: $sm-padding;
+  }
+  @media screen and (min-width: 1024px) {
+    padding-left: $md-padding;
+    padding-right: $md-padding;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-left: $lg-padding;
+    padding-right: $lg-padding;
+  }
+}

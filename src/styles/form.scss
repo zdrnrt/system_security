@@ -1,4 +1,5 @@
-.form{}
+.form{
+}
 .checkbox{
   position: relative;
   display: flex;
@@ -9,12 +10,15 @@
   cursor: pointer;
   &__input{
     position: absolute;
-    top: -9999px;
-    left: -9999px;
-    visibility: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
     &:checked + .checkbox__status{
       background-color: rgb(255, 43, 60);
       border-color: rgb(255, 43, 60);
+    }
+    &:focus + .checkbox__status{
+      outline: 2px solid $cl-input-focus;
     }
   }
   &__status{
@@ -25,5 +29,73 @@
   }
   &__text{
     max-width: 300px;
+  }
+}
+
+.form-item{
+  display: block;
+  position: relative;
+  &--error{
+    .form-item__input{
+      border-color: $cl-input-error;
+    }
+    .form-item__error{
+      display: block;
+    }
+  }
+  & + &{
+    margin-top: 30px;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    padding: 14px 35px;
+    padding-right: 65px;
+    border-radius: 25px;
+    border: 1px solid $cl-input-border;
+    // width: 608px;
+    // height: 48px;
+    color: $cl-black;
+    font-size: 15px;
+    line-height: 1.2;
+    transition: $transition;
+    &::placeholder{
+      color: $cl-black;
+    }
+    &:focus{
+      border-color: transparent;
+      outline: 2px solid $cl-input-focus;
+    }
+  }
+  &__error{
+    display: none;
+    position: absolute;
+    padding-left: 35px;
+    color: $cl-input-error;
+  }
+}
+
+.btn{
+  padding: 21px;
+  font-size: 22px;
+  color: $cl-white;
+  line-height: 1.2;
+  text-align: center;
+  border: none;      
+  border-radius: 40px;
+  transition: $transition;
+  cursor: pointer;
+  // background-image: linear-gradient( -47deg, $cl-orange 0%, $cl-red 100%);
+  background-image: linear-gradient(-47deg, #ff9e17 0%, #ff2b3c 50%, #ff9e17 100%);
+  background-size: 200%;
+  background-position: right center;
+  &:hover{
+    background-position: left center;
+  }
+  &:active{
+    opacity: 0.7;
+  }
+  &:focus{
+    outline: 2px solid $cl-input-focus;
   }
 }

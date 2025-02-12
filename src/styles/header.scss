@@ -8,6 +8,9 @@
   @extend .container;
   padding-top: 40px;
   padding-bottom: 40px;
+  &__logo{
+    width: fit-content;
+  }
 }
 
 .logo{

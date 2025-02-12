@@ -7,8 +7,21 @@ $cl-gray: #3a3a3a;
 $cl-black: #000000;
 $cl-white: #fff;
 $cl-border: #878787;
+$cl-input-border: #666666;
+$cl-input-error: #ff2b3c;
+$cl-input-focus: #ff9e17;
 $cl-one-border: #dbdbdb;
+$cl-red: #ff2b3c;
+$cl-orange: #ff9e17;
 
 // custom
+$transition: 0.1s ease-in;
 
-$transition: 0.3s;
+// contianer
+$sm: 690px;
+$md: 960px;
+$lg: 1140px;
+
+$sm-padding: calc(( 100vw - $sm) / 2);
+$md-padding: calc(( 100vw - $md) / 2);
+$lg-padding: calc(( 100vw - $lg) / 2);
