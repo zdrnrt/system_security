@@ -1,0 +1,29 @@
+.header{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  @extend .container;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.logo{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  column-gap: 6px;
+  text-decoration: none;
+  transition: $transition;
+  font-size: 20px;
+  color: $cl-gray;
+  line-height: 1.2;
+  text-align: left;
+  &__icon{
+    width: 20px;
+  }
+  &__text{
+  }
+}

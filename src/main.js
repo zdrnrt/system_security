@@ -1,6 +1,11 @@
+// styles
 import 'normalize.css'
 import './styles/fonts.css'
 import './styles/style.scss'
+
+// imgs
+import './assets/img/fire.png'
+
 
 const start = document.querySelector('.start');
 const stop = document.querySelector('.stop');
