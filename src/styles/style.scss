@@ -2,9 +2,11 @@
 @import 'form';
 @import 'header';
 @import 'one';
+@import 'two';
 body{
   font-family: $optimus;
   font-size: 16px;
+  color: $cl-gray;
 }
 img{
   width: 100%;
@@ -26,11 +28,22 @@ img{
 .h1 {
   margin: 0;
   font-size: 50px;
-  color: rgb(58, 58, 58);
   line-height: 1.2;
   text-align: left;
 }
-
+.h2{
+  margin: 0;
+  font-size: 65px;
+  line-height: 1;
+  font-weight: 400;
+}
+.h3{
+  margin: 0;
+  font-family: $playfair;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+}
 .btn{
   padding: 21px;
   height: 72px;
