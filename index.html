@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -105,17 +105,18 @@
             </h2>
             <form class="three__form form callback-form">
               <label class="form-item form-item--name">
-                <input class="form-item__input" type="text" name="name" placeholder="Вашу ФИО">
+                <input class="form-item__input" type="text" name="name" placeholder="Вашу ФИО" required="true">
                 <span class="form-item__error form-item__error--hidden">error</span>
               </label>
               <label class="form-item form-item--email">
-                <input class="form-item__input" type="text" name="email" placeholder="E-mail">
+                <input class="form-item__input" type="email" name="email" placeholder="E-mail" required="true">
                 <span class="form-item__error form-item__error--hidden">error</span>
               </label>
               <label class="form-item form-item--phone">
-                <input class="form-item__input" type="text" name="phone" placeholder="Телефон">
+                <input class="form-item__input" type="number" name="phone" placeholder="Телефон" required="true">
                 <span class="form-item__error form-item__error--hidden">error</span>
               </label>
+              <input type="hidden" name="token" value="asddsa">
               <button class="btn callback-form__submit" type="submit">Отправить</button>
             </form>
           </div>
