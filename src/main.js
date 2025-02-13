@@ -5,29 +5,63 @@ import './styles/style.scss'
 
 // 
 
-const start = document.querySelector('.start');
-const stop = document.querySelector('.stop');
-const video = document.querySelector('.video');
+const check_form = document.querySelector('.check-form');
+const check_close = document.querySelector('.video__close');
+const check_video = document.querySelector('.video__video');
+const check_video_cont = document.querySelector('.video');
+
 let camera_stream = null;
+let timer_check = null;
 
-start.addEventListener('click', startVideo)
-stop.addEventListener('click', stopVideo)
-
-function startVideo(){
-  console.log('startVideo')
-  navigator.mediaDevices.getUserMedia({video: true})
+function startVideo(e){
+  e.preventDefault();
+  document.body.classList.add('body--overflow')
+  check_video_cont.classList.add('video--open')
+  navigator.mediaDevices.getUserMedia({
+    video: {
+      width: { min: 375, ideal: window.outerWidth, max: 1920 },
+      height: { min: 670, ideal: window.outerHeight, max: 1080 },
+    }
+  })
   .then( (result) => {
     camera_stream = result
-    video.srcObject = camera_stream;
-    video.play();
+    check_video.srcObject = camera_stream;
+    check_video.play();
   } )  
   .catch( (error) => console.log(error))
+
+  timer_check = setTimeout(() => {
+    stopVideo();
+    showResult();
+  }, 6000);
 }
 
 function stopVideo(){
-  console.log('stopVideo')
+  clearInterval(timer_check);
+  document.body.classList.remove('body--overflow')
+  check_video_cont.classList.remove('video--open')
   camera_stream.getTracks()[0].stop();
+  camera_stream = null;
 }
+
+const result = document.querySelector('.result');
+const result__close = document.querySelector('.result__close');
+
+function showResult(){
+  document.body.classList.add('body--overflow')
+  result.classList.add('result--open');
+}
+function closeResult(){
+  document.body.classList.remove('body--overflow')
+  result.classList.remove('result--open');
+}
+
+result__close.addEventListener('click', closeResult)
+
+
+check_form.addEventListener('submit', startVideo);
+check_close.addEventListener('click', stopVideo)
+
 
 const phone_input = document.querySelector('[name="phone"]');
 

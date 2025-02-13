@@ -1,0 +1,62 @@
+.video{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  &--open{
+    display: block;
+  }
+  &__bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/img/video-template.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__close{
+    position: absolute;
+    left: 60px;
+    top: 40px;
+    z-index: 2;
+    padding: 0;
+    font-size: 60px;
+    color: $cl-red;
+    line-height: 1;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  &__text {
+    position: relative;
+    top: 20%;
+    z-index: 1;
+    max-width: 450px;
+    margin: 0 auto;
+    font-size: 23px;
+    color: $cl-white;
+    line-height: 1.2;
+    text-align: center;
+  }
+  &__video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
