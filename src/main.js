@@ -37,6 +37,8 @@ function startVideo(e){
 }
 
 function stopVideo(){
+  console.log('stopVideo');
+  console.log(timer_check);
   clearInterval(timer_check);
   document.body.classList.remove('body--overflow')
   check_video_cont.classList.remove('video--open')
@@ -48,6 +50,7 @@ const result = document.querySelector('.result');
 const result__close = document.querySelector('.result__close');
 
 function showResult(){
+  console.log('showResult');
   document.body.classList.add('body--overflow')
   result.classList.add('result--open');
 }
