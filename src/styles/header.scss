@@ -6,8 +6,12 @@
   right: 0;
   z-index: 1;
   @extend .container;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media screen and (min-width: 1024px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   &__logo{
     width: fit-content;
   }
