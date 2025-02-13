@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="./src/assets/img/fire.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Системы Информационной Безопасности</title>
   </head>
@@ -105,16 +105,16 @@
             </h2>
             <form class="three__form form callback-form">
               <div class="form-error form-error--hidden">Ошибка отправки формы</div>
-              <label class="form-item form-item--name">
-                <input class="form-item__input" type="text" name="name" placeholder="Вашу ФИО" required="true" value="">
+              <label class="form-item">
+                <input class="form-item__input form-item__input--name" type="text" name="name" placeholder="Вашу ФИО" _required="true" value="">
                 <span class="form-item__error form-item__error--hidden">error</span>
               </label>
-              <label class="form-item form-item--email">
-                <input class="form-item__input" type="email" name="email" placeholder="E-mail" required="true" value="">
+              <label class="form-item">
+                <input class="form-item__input form-item__input--email" type="email" name="email" placeholder="E-mail" _required="true" value="">
                 <span class="form-item__error form-item__error--hidden">error</span>
               </label>
-              <label class="form-item form-item--phone">
-                <input class="form-item__input" type="text" name="phone" placeholder="Телефон" required="true" value="">
+              <label class="form-item">
+                <input class="form-item__input form-item__input--phone" type="text" name="phone" placeholder="Телефон" _required="true" value="">
                 <span class="form-item__error form-item__error--hidden">error</span>
               </label>
               <input type="hidden" name="token" value="asddsa">
@@ -145,6 +145,19 @@
         </div>
       </section>
     </main>
+
+    <div class="modal" data-modal="success">
+      <div class="modal__content">
+        <button class="modal__close">X</button>
+        Ваша заявка успешно отправлена!
+      </div>
+    </div>
+    <div class="modal" data-modal="error">
+      <div class="modal__content">
+        <button class="modal__close">X</button>
+        Ошибка доступа к камере!
+      </div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

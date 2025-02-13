@@ -28,7 +28,10 @@ function startVideo(e){
     check_video.srcObject = camera_stream;
     check_video.play();
   } )  
-  .catch( (error) => console.log(error))
+  .catch( (error) => {
+    modalOpen('error');
+    console.log(error);
+  })
 
   timer_check = setTimeout(() => {
     stopVideo();
@@ -37,8 +40,6 @@ function startVideo(e){
 }
 
 function stopVideo(){
-  console.log('stopVideo');
-  console.log(timer_check);
   clearInterval(timer_check);
   document.body.classList.remove('body--overflow')
   check_video_cont.classList.remove('video--open')
@@ -119,6 +120,7 @@ function callback(e) {
   for (let item of form.querySelectorAll('.form-item')){
     item.classList.remove('form-item--error')
   }
+
   fetch('https://api-demo.rednosed.agency/', {
     method: 'POST',
     body: new FormData(e.srcElement)
@@ -130,10 +132,15 @@ function callback(e) {
     .then( (data) => {
       if (!data.result){
         for (let warning in data.warnings){
-          setError(form, warning, data.warnings[warning])
+          if (warning == 'token'){
+            form.querySelector('.form-error').classList.remove('form-error--hidden');
+          } else {
+            setError(form, warning, data.warnings[warning])
+          }
         }
         return;
       }
+      modalOpen('success');
       form.reset()
     })
     .catch( (error) => {
@@ -146,3 +153,18 @@ function callback(e) {
 }
 
 callback_form.addEventListener('submit', callback)
+
+function modalOpen(modal){
+  document.body.classList.add('body--overflow')
+  document.querySelector(`[data-modal="${modal}"]`).classList.add('modal--open');
+}
+
+for (let btn of document.querySelectorAll('.modal__close')){
+  btn.addEventListener('click', modalClose)
+}
+
+function modalClose(e){
+  console.log(e, e.target)
+  e.target.closest('[data-modal]').classList.remove('modal--open');
+  document.body.classList.remove('body--overflow');
+}

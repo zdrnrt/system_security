@@ -57,12 +57,26 @@
     font-size: 15px;
     line-height: 1.2;
     transition: $transition;
+    background-color: $cl-white;
+    background-repeat: no-repeat;
     &::placeholder{
       color: $cl-black;
     }
     &:focus{
       border-color: transparent;
       outline: 2px solid $cl-input-focus;
+    }
+    &--name{
+      background-image: url('../assets/img/input-name.png');
+      background-position: calc(100% - 45px) 50%;
+    }
+    &--email{
+      background-image: url('../assets/img/input-mail.png');
+      background-position: calc(100% - 43px) 50%;
+    }
+    &--phone{
+      background-image: url('../assets/img/input-phone.png');
+      background-position: calc(100% - 43px) 50%;
     }
   }
   &__error{
