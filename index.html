@@ -104,16 +104,17 @@
               Заказать <span class="three__title--border">очищение.</span>
             </h2>
             <form class="three__form form callback-form">
+              <div class="form-error form-error--hidden">Ошибка отправки формы</div>
               <label class="form-item form-item--name">
-                <input class="form-item__input" type="text" name="name" placeholder="Вашу ФИО" required="true">
+                <input class="form-item__input" type="text" name="name" placeholder="Вашу ФИО" required="true" value="">
                 <span class="form-item__error form-item__error--hidden">error</span>
               </label>
               <label class="form-item form-item--email">
-                <input class="form-item__input" type="email" name="email" placeholder="E-mail" required="true">
+                <input class="form-item__input" type="email" name="email" placeholder="E-mail" required="true" value="">
                 <span class="form-item__error form-item__error--hidden">error</span>
               </label>
               <label class="form-item form-item--phone">
-                <input class="form-item__input" type="number" name="phone" placeholder="Телефон" required="true">
+                <input class="form-item__input" type="text" name="phone" placeholder="Телефон" required="true" value="">
                 <span class="form-item__error form-item__error--hidden">error</span>
               </label>
               <input type="hidden" name="token" value="asddsa">
